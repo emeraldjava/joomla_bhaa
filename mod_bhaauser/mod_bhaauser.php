@@ -13,7 +13,8 @@ defined('_JEXEC') or die;
 require_once dirname(__FILE__).'/helper.php';
 
 // Get the user data
-$list	= modUserDataHelper::getData($params);
+//$list	= modUserDataHelper::getData($params);
+$list	= modUserDataHelper::getBHAAData($params);
 
 // Get the layout
 require JModuleHelper::getLayoutPath('mod_bhaauser', $params->get('layout', 'default'));
