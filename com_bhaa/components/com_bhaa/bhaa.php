@@ -15,11 +15,10 @@
 defined('_JEXEC') or die('Restricted access');
 
 // ACL rules
-
-$acl =& JFactory::getACL();
-$acl->addACL( 'com_tracks', 'manage', 'users', 'super administrator' );
+//$acl = &JFactory::getACL();
+//$acl->addACL( 'com_tracks', 'manage', 'users', 'super administrator' );
 /* Additional access groups */
-$acl->addACL( 'com_tracks', 'manage', 'users', 'administrator' );
+//$acl->addACL( 'com_tracks', 'manage', 'users', 'administrator' );
     
 // Require the base controller
 require_once (JPATH_COMPONENT.DS.'controller.php');

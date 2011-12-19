@@ -78,7 +78,7 @@
 			<folder>help</folder>
 			<folder>helpers</folder>
 			<folder>models</folder>
-			<folder>projectparameters</folder>
+			<!-- <folder>projectparameters</folder>-->
 			<folder>tables</folder>
 			<folder>views</folder>
 		</files>

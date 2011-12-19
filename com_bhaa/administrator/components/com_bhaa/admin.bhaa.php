@@ -30,7 +30,7 @@ require_once (JPATH_COMPONENT.DS.'controller.php');
 require_once( JPATH_COMPONENT.DS.'helper.php' );
 
 // and the abstract view
-require_once (JPATH_COMPONENT.DS.'abstract'.DS.'tracksview.php');
+require_once (JPATH_COMPONENT.DS.'abstract'.DS.'bhaaview.php');
 
 // Require specific controller if requested
 if($controller = JRequest::getWord('controller')) {
@@ -46,7 +46,7 @@ if($controller = JRequest::getWord('controller')) {
 JTable::addIncludePath( JPATH_COMPONENT.DS.'tables' );
 
 // Create the controller
-$classname	= 'TracksController'.ucfirst($controller);
+$classname	= 'BHAAController'.ucfirst($controller);
 $controller	= new $classname( );
 
 // Perform the Request task
