@@ -23,7 +23,7 @@ jimport('joomla.application.component.controller');
  * @package   JoomlaTracks
  * @since 0.2
  */
-class TracksHelper
+class BHAAHelper
 {
 
 	/**

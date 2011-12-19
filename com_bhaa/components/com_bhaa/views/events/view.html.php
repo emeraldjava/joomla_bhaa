@@ -41,7 +41,7 @@ class BHAAFrontViewEvents extends JView
     		$dbo1 = & JDatabase::getInstance($option);
     	}
     	
-    	$dbo1->setQuery("select * from runner where runner.id=7713");
+    	$dbo1->setQuery("select * from event");
     	$rows = $dbo1->loadObjectList();
     	
     	// Get list items
@@ -50,10 +50,12 @@ class BHAAFrontViewEvents extends JView
     		$i=0;
     		foreach ($rows as $row)
     		{
+    			echo($row->id);
     			$list["users"][$i]["id"]=$row->id;
-    			$list["users"][$i]["name"]=$row->firstname;
+    			$list["users"][$i]["name"]=$row->name;
     			//$list["users"][$i]["surname"]=$row->surname;
-    			$list["users"][$i]["username"]=$row->address1;
+    			$list["users"][$i]["tag"]=$row->tag;
+    			echo($list["users"][$i]["tag"]);
     			$i++;
     		}
     		//return $list;

@@ -24,7 +24,7 @@ if (!$user->authorize( 'com_tracks', 'manage' )) {
 }*/
 
 // Require the base controller
-require_once (JPATH_COMPONENT.DS.'controllers'.DS.'base.php');
+//require_once (JPATH_COMPONENT.DS.'controllers'.DS.'base.php');
 require_once (JPATH_COMPONENT.DS.'controller.php');
 // the helper
 require_once( JPATH_COMPONENT.DS.'helper.php' );
