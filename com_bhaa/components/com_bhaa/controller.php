@@ -1,10 +1,10 @@
 <?php
 /**
 * @version    $Id: controller.php 109 2008-05-24 11:05:07Z julienv $ 
-* @package    JoomlaTracks
+* @package    Joomlabhaa
 * @copyright	Copyright (C) 2008 Julien Vonthron. All rights reserved.
 * @license		GNU/GPL, see LICENSE.php
-* Joomla Tracks is free software. This version may have been modified pursuant
+* Joomla bhaa is free software. This version may have been modified pursuant
 * to the GNU General Public License, and as distributed it includes or
 * is derivative of works licensed under the GNU General Public License or
 * other free or open source software licenses.
@@ -17,23 +17,22 @@ defined('_JEXEC') or die();
 jimport('joomla.application.component.controller');
 
 $document = &JFactory::getDocument();
-$document->addStyleSheet( JURI::base() . 'components/com_tracks/css/tracks.css', 'text/css', null, array( 'id' => 'tracksstyleSheet' ) );
+$document->addStyleSheet( JURI::base() . 'components/com_bhaa/css/bhaa.css', 'text/css', null, array( 'id' => 'bhaastyleSheet' ) );
 
 /**
- * Tracks Component Controller
+ * bhaa Component Controller
  *
- * @package		Tracks
+ * @package		bhaa
  * @since 0.1
  */
-class TracksFrontController extends JController
+class BHAAFrontController extends JController
 {
 	function display()
 	{
 		// Set a default view if none exists
 		if ( ! JRequest::getCmd( 'view' ) ) {
-			JRequest::setVar('view', 'projects' );
+			JRequest::setVar('view', 'events' );
 		}
-
 		parent::display();
 	}
 }
