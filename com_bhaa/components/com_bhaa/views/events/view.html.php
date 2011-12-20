@@ -23,9 +23,17 @@ jimport( 'joomla.application.component.view');
  * @package		Tracks
  * @since 0.1
  */
-class BHAAFrontViewEvents extends JView
+class BHAAViewEvents extends JView
 {
-    function display($tpl = null)
+	function display($tpl = null)
+	{
+		$model =& $this->getModel();
+		$events = $model->getEvents();
+		$this->assignRef( 'events',$events );
+		parent::display($tpl);
+	}
+	
+    function display2($tpl = null)
     {
     	static $dbo1 = null;
     	

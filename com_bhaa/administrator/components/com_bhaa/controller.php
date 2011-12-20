@@ -22,7 +22,7 @@ jimport('joomla.application.component.controller');
  * @package		Tracks
  * @since 0.1
  */
-class BHAAController extends BaseController
+class BhaaController extends BaseController
 {
   function display()
   {

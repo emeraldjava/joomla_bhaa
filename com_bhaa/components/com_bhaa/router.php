@@ -17,7 +17,7 @@
  * @param url $query
  * @return array
  */
-function BHAABuildRoute(&$query)
+function BhaaBuildRoute(&$query)
 {
     $view = '';
     $segments = array();

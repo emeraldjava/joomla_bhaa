@@ -25,7 +25,7 @@ $document->addStyleSheet( JURI::base() . 'components/com_bhaa/css/bhaa.css', 'te
  * @package		bhaa
  * @since 0.1
  */
-class BHAAFrontController extends JController
+class BhaaController extends JController
 {
 	function display()
 	{

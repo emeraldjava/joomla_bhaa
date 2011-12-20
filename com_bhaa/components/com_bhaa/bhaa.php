@@ -35,7 +35,7 @@ if($controller = JRequest::getWord('controller')) {
 }
 
 // Create the controller
-$classname	= 'BHAAFrontController'.ucfirst($controller);
+$classname	= 'BhaaController'.ucfirst($controller);
 $controller = new $classname( );
 
 // Perform the Request task
