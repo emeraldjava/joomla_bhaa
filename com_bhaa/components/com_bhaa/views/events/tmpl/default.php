@@ -27,20 +27,20 @@ defined('_JEXEC') or die('Restricted access'); ?>
   <?php
   if ( count($this->events) )
   {
-    foreach ( $this->events as $project )
+    foreach ( $this->events as $event )
     {
-      $link_project = JRoute::_( 'index.php?view=project&p=' . $project['id'] );
-      $link_ranking = JRoute::_( 'index.php?view=ranking&p=' . $project['id'] );	
-      $link_teams_ranking = JRoute::_( 'index.php?view=teamranking&p=' . $project['id'] );			     
+      $link_project = JRoute::_( 'index.php?view=project&p=' . $event['id'] );
+      $link_ranking = JRoute::_( 'index.php?view=ranking&p=' . $event['id'] );	
+      $link_teams_ranking = JRoute::_( 'index.php?view=teamranking&p=' . $event['id'] );			     
      ?>
       <tr>
         <td>
         	<a href="<?php echo $link_project; ?>" title ="<?php echo JText::_( 'Display' ); ?>">
-        	  <?php echo $project->id; ?>
+        	  <?php echo $event['id']; ?>
         	</a>
        	</td>
-        <td><?php echo $project->name; ?></td>
-        <td><?php echo $project->tag; ?></td>
+        <td><?php echo $event['name']; ?></td>
+        <td><?php echo $event['tag']; ?></td>
         <td>
         	<a href="<?php echo $link_ranking; ?>" title ="<?php echo JText::_( 'Rankings' ); ?>">
         	  <?php echo JText::_( 'Rankings' ); ?>

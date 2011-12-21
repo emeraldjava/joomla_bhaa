@@ -19,7 +19,7 @@ class BhaaHelper
 {
 	function &getBhaaDB() {
 		static $dbo1 = null;
-		//if (!$dbo1) {
+		if (!$dbo1) {
 			$option = array();
 			$option['driver'] = 'mysqli';        // Database driver name
 			$option['host'] = 'localhost';      // Database host name
@@ -27,12 +27,10 @@ class BhaaHelper
 			$option['password'] = 'Passw0rd';   // Password for database authentication
 			$option['database'] = 'bhaa1_members';   // Database name
 			$option['prefix'] = '';             // Database prefix
-			//
-			print_r($option); 
+			//print_r($option); 
 			$dbo1 = & JDatabase::getInstance($option);
-			//printf($dbo1);
-		//}
-			return $dbo1;
+		}
+		return $dbo1;
 	}
 	
 }

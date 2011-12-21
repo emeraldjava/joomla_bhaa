@@ -25,7 +25,8 @@ require_once (JPATH_COMPONENT.DS.'controller.php');
 require_once (JPATH_COMPONENT.DS.'helpers'.DS.'bhaa.php');
 require_once (JPATH_COMPONENT.DS.'helpers'.DS.'bhaahtml.php');
 //require_once(JPATH_COMPONENT_ADMINISTRATOR.DS.'helpers'.DS.'joodb.php');
-JTable::addIncludePath(JPATH_COMPONENT_ADMINISTRATOR.DS.'tables');
+//JTable::addIncludePath(JPATH_COMPONENT_ADMINISTRATOR.DS.'models');
+//JTable::addIncludePath(JPATH_COMPONENT_ADMINISTRATOR.DS.'tables');
 
 
 // Require specific controller if requested
