@@ -1,6 +1,6 @@
 <?php
 /**
-* @version    $Id: controller.php 133 2008-06-08 10:24:29Z julienv $ 
+* @version    $Id: view.html.php 109 2008-05-24 11:05:07Z julienv $ 
 * @package    JoomlaTracks
 * @copyright	Copyright (C) 2008 Julien Vonthron. All rights reserved.
 * @license		GNU/GPL, see LICENSE.php
@@ -14,19 +14,29 @@
 // Check to ensure this file is included in Joomla!
 defined('_JEXEC') or die();
 
-jimport('joomla.application.component.controller');
+jimport( 'joomla.application.component.view');
 
 /**
- * Tracks Component Controller
+ * HTML View class for the Tracks component
  *
+ * @static
  * @package		Tracks
  * @since 0.1
  */
-class BhaaController extends JController //extends BaseController
+class BhaaViewBhaa extends JView
 {
-  function display()
-  {
-		parent::display();
+	function display($tpl = null)
+	{
+		jimport('joomla.html.pane');
+		
+		$params = new JParameter( $row->params, JPATH_ADMINISTRATOR .'/components/com_bhaa/config_items.xml', 'component' );
+		
+		$this->assignRef('params', $params);
+		
+		//$model =& $this->getModel();
+		//$events = $model->getEvents();
+		//$this->assignRef( 'events',$events );
+		parent::display($tpl);
 	}
 }
 ?>

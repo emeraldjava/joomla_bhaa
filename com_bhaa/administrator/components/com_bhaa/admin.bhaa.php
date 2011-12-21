@@ -46,7 +46,7 @@ if($controller = JRequest::getWord('controller')) {
 JTable::addIncludePath( JPATH_COMPONENT.DS.'tables' );
 
 // Create the controller
-$classname	= 'BHAAController'.ucfirst($controller);
+$classname	= 'BhaaController'.ucfirst($controller);
 $controller	= new $classname( );
 
 // Perform the Request task
