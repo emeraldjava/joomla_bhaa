@@ -23,6 +23,8 @@ $editor =& JFactory::getEditor();
 
 $sliders = &JPane::getInstance('sliders', array('allowAllClose' => false));
 $tabs = &JPane::getInstance('sliders', array('useCookie' => true,'allowAllClose' => true));
+
+JToolBarHelper::preferences( 'com_bhaa','550' );
 ?>
 
 <div id="bhaa">
@@ -42,6 +44,35 @@ $tabs = &JPane::getInstance('sliders', array('useCookie' => true,'allowAllClose'
 	</fieldset>
 </div>
 </form>
+<script language="JavaScript">
+
+//Send Form
+if (window.Joomla !== undefined)
+	Joomla.submitbutton = function(task) { submitbutton(task);  }
+
+function submitbutton(task)
+		{
+			var form = document.adminForm;
+			form.task.value = task;
+			// tinymce is buggy!!!
+
+			if (task == 'cancel') {
+				if (window.Joomla) { Joomla.submitform(task, form); } else { form.submit(); }
+				return true;
+			}
+
+			// do field validation
+			if (form.name.value == ""){
+				alert('<?php echo JText::_( "Name Your DB" ); ?>');
+				form.title.focus();
+				return false;
+			} else  {
+		        if ((form.table.value=="") && (!document.formvalidator.isValid(form))) return false;
+				if (window.Joomla) { Joomla.submitform(task, form); } else { form.submit(); }
+			}
+			return false;
+		}
+</script>
 
 <p class="copyright">
 </p>

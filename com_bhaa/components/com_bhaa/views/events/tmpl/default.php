@@ -58,6 +58,6 @@ defined('_JEXEC') or die('Restricted access'); ?>
   ?>
 </table>
 <p class="copyright">
-  <?php echo HTMLtracks::footer( ); ?>
+  <?php echo BhaaHTML::footer( ); ?>
 </p>
 </div>

@@ -14,11 +14,11 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-class HTMLTracks
+class BhaaHTML
 {
 	function footer()
 	{		
-    echo 'bhaa.ie';
+        echo 'bhaa.ie';
 	}
 	
  /**

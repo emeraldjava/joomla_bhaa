@@ -27,8 +27,12 @@ class BHAAViewEvents extends JView
 {
 	function display($tpl = null)
 	{
+		//$params=$this->getParams('com_yourcomponent');
+		//print_r($params);
+		
 		$model =& $this->getModel();
 		$events = $model->getEvents();
+		print_r($events);
 		$this->assignRef( 'events',$events );
 		parent::display($tpl);
 	}
