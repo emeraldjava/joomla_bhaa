@@ -21,8 +21,6 @@ defined('_JEXEC') or die('Restricted access'); ?>
     <th><?php echo JText::_( 'Name' ) ?></th>
     <th><?php echo JText::_( 'Competition' ) ?></th>
     <th><?php echo JText::_( 'Season' ) ?></th>
-    <th><?php echo JText::_( '' ) ?></th>
-    <th><?php echo JText::_( '' ) ?></th>
   </tr>
   <?php
   if ( count($this->events) )
@@ -41,16 +39,6 @@ defined('_JEXEC') or die('Restricted access'); ?>
        	</td>
         <td><?php echo $event['name']; ?></td>
         <td><?php echo $event['tag']; ?></td>
-        <td>
-        	<a href="<?php echo $link_ranking; ?>" title ="<?php echo JText::_( 'Rankings' ); ?>">
-        	  <?php echo JText::_( 'Rankings' ); ?>
-        	</a>
-       	</td>
-        <td>
-        	<a href="<?php echo $link_teams_ranking; ?>" title ="<?php echo JText::_( 'Team Rankings' ); ?>">
-        	  <?php echo JText::_( 'Team Rankings' ); ?>
-        	</a>
-       	</td>
       </tr>
     	<?php
     }
