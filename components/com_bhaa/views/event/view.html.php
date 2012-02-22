@@ -27,9 +27,15 @@ class BHAAViewEvent extends JView
 {
 	function display($tpl = null)
 	{	
+		$application = &JFactory::getApplication();
+		$params	= &$application->getParams();
 		//$model =& $this->getModel();
 		//$events = $model->getEvents();
-		//$this->assignRef( 'events',$events );
+		$this->assignRef( 'params',$params );
+		
+		$appparams =& JComponentHelper::getParams('com_bhaa');
+		$this->assignRef('appparams',$appparams );
+		
 		parent::display($tpl);
 	}
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-    <layout title="DEFAULT EVENTS LAYOUT">
+    <layout title="DEFAULT EVENT LAYOUT">
         <message>
-        <![CDATA[DEFAULT EVENTS LAYOUT TIP]]>
+        <![CDATA[DEFAULT EVENT LAYOUT TIP]]>
         </message>
     </layout>
     <state>
-        <name>DEFAULT EVENTS LAYOUT</name>
-        <description>DEFAULT EVENTS LAYOUT TIP</description>
+        <name>DEFAULT EVENT LAYOUT</name>
+        <description>DEFAULT EVENT LAYOUT TIP</description>
 	    <params>
 	      <param name="order" type="list" default="0" label="Criteria for ordering" description="Chose how to order events">
 	        <option value="0">By year</option>

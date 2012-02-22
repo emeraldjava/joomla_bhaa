@@ -15,7 +15,7 @@ jimport('joomla.application.component.helper');
 /**
  * JooDB Component Helper
  */
-class BhaaHelper
+class BHAAHelper
 {
 	function &getBhaaDB() {
 		static $dbo1 = null;
@@ -23,15 +23,14 @@ class BhaaHelper
 			$option = array();
 			$option['driver'] = 'mysqli';        // Database driver name
 			$option['host'] = 'localhost';      // Database host name
-			$option['user'] = 'bhaa1';       // User for database authentication
-			$option['password'] = 'Passw0rd';   // Password for database authentication
-			$option['database'] = 'bhaa1_members';   // Database name
+			$option['user'] = 'bhaaie';       // User for database authentication
+			$option['password'] = 'bhaaie';   // Password for database authentication
+			$option['database'] = 'bhaaie_members';   // Database name
 			$option['prefix'] = '';             // Database prefix
 			//print_r($option); 
 			$dbo1 = & JDatabase::getInstance($option);
 		}
 		return $dbo1;
 	}
-	
 }
 ?>
