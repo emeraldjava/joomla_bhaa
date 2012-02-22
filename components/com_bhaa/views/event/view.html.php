@@ -23,7 +23,7 @@ jimport( 'joomla.application.component.view');
  * @package		Tracks
  * @since 0.1
  */
-class BHAAViewEvents extends JView
+class BHAAViewEvent extends JView
 {
 	function display($tpl = null)
 	{	

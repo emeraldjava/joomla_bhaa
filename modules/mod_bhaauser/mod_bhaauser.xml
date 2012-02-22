@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension type="module" version="1.7" client="site" method="upgrade">
+<extension type="module" version="2.5" client="site" method="upgrade">
  <name>BHAA User Module</name>
  <author>paul.t.oconnell@gmail.com</author>
  <creationDate>03/08/2011</creationDate>
