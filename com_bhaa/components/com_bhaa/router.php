@@ -29,7 +29,7 @@ function BhaaBuildRoute(&$query)
     }
     switch ( $view )
     {
-        case 'project':
+        case 'event':
         case 'ranking':
         case 'teamranking':
             if(isset($query['p']))
@@ -76,13 +76,13 @@ function BhaaBuildRoute(&$query)
  * @param array $segments
  * @return array
  */
-function TracksParseRoute($segments)
+function BhaaParseRoute($segments)
 {
     $vars = array();
     switch($segments[0])
     {
-        case 'project':
-            $vars['view'] = 'project';
+        case 'event':
+            $vars['view'] = 'event';
             $id = explode( ':', $segments[1] );
             $vars['p'] = (int) $id[0];
             break;

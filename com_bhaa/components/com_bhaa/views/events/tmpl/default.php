@@ -27,14 +27,12 @@ defined('_JEXEC') or die('Restricted access'); ?>
   {
     foreach ( $this->events as $event )
     {
-      $link_project = JRoute::_( 'index.php?view=project&p=' . $event['id'] );
-      $link_ranking = JRoute::_( 'index.php?view=ranking&p=' . $event['id'] );	
-      $link_teams_ranking = JRoute::_( 'index.php?view=teamranking&p=' . $event['id'] );			     
+     $link_event = JRoute::_( 'index.php?view=event&p=' . $event['tag'] );
      ?>
       <tr>
         <td>
-        	<a href="<?php echo $link_project; ?>" title ="<?php echo JText::_( 'Display' ); ?>">
-        	  <?php echo $event['id']; ?>
+        	<a href="<?php echo $link_event; ?>" title ="<?php echo JText::_( 'Event' ); ?>">
+        	  <?php echo $event['tag']; ?>
         	</a>
        	</td>
         <td><?php echo $event['name']; ?></td>
