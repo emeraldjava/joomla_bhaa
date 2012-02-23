@@ -29,9 +29,9 @@ class BhaaModelEvent extends BhaaModel
 	function getResults()
 	{
 		$id = JRequest::getInt('e',1);
-		$query =  'SELECT rr.race,rr.runner,rr.position,r.surname,r.firstname FROM raceresult rr 
+		$query = sprintf('SELECT rr.race,rr.runner,rr.position,r.surname,r.firstname FROM raceresult rr 
 JOIN runner r on rr.runner=r.id 
-WHERE rr.race = 201206 ORDER by rr.position;';
+WHERE rr.race = %d ORDER by rr.position;',$id);
 		$this->getDB()->setQuery( $query );
 		$x = $this->getDB()->loadAssocList();
 		return $x;
