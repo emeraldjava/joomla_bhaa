@@ -15,6 +15,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
 
 <div id="event">
 <h1><?php echo JText::_( 'BHAA Event' ) ?></h1>
+<h3><?php echo JText::_( $this->id ) ?></h3>
 <h3><?php echo JText::_( $this->params ) ?></h3>
 <h3><?php echo JText::_( $this->appparams ) ?></h3>
 

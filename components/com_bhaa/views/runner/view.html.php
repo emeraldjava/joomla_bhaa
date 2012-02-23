@@ -23,23 +23,11 @@ jimport( 'joomla.application.component.view');
  * @package		Tracks
  * @since 0.1
  */
-class BHAAViewEvent extends JView
+class BHAAViewRunner extends JView
 {
 	function display($tpl = null)
 	{	
-		$application = &JFactory::getApplication();
-		$params	= &$application->getParams();
-		
-		$id = &JRequest::getVar("e","0");
-		
-		//$model =& $this->getModel();
-		//$events = $model->getEvents();
-		$this->assignRef( 'params',$params );
-		$this->assignRef( 'id',$id );
-		
-		$appparams =& JComponentHelper::getParams('com_bhaa');
-		$this->assignRef('appparams',$appparams );
-		
+		$this->assign('runner','their name');
 		parent::display($tpl);
 	}
 }

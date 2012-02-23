@@ -10,7 +10,6 @@
 * other free or open source software licenses.
 * See COPYRIGHT.php for copyright notices and details.
 */
-
 /**
  * transform the url passed in JRoute function for SEF display
  *
@@ -30,42 +29,20 @@ function BhaaBuildRoute(&$query)
     switch ( $view )
     {
         case 'event':
-        case 'ranking':
-        case 'teamranking':
-            if(isset($query['p']))
+            if(isset($query['e']))
             {
-                $segments[] = $query['p'];
-                unset( $query['p'] );
+                $segments[] = $query['e'];
+                unset( $query['e'] );
             }
             break;
-        case 'roundresult':
-            if(isset($query['pr']))
-            {
-                $segments[] = $query['pr'];
-                unset( $query['pr'] );
-            }
-            break;
-        case 'individual':
-		    if(isset($query['i']))
-		    {
-		        $segments[] = $query['i'];
-		        unset( $query['i'] );
-		    }
-		    break;
-		case 'team':
-            if(isset($query['t']))
-            {
-                $segments[] = $query['t'];
-                unset( $query['t'] );
-            }
-            break;
-        case 'round':
+        case 'runner':
             if(isset($query['r']))
             {
                 $segments[] = $query['r'];
                 unset( $query['r'] );
             }
             break;
+
     }
     return $segments;
 }
@@ -84,42 +61,69 @@ function BhaaParseRoute($segments)
         case 'event':
             $vars['view'] = 'event';
             $id = explode( ':', $segments[1] );
-            $vars['p'] = (int) $id[0];
+            $vars['e'] = (int) $id[0];
             break;
-        case 'ranking':
-            $vars['view'] = 'ranking';
-            $id = explode( ':', $segments[1] );
-            $vars['p'] = (int) $id[0];
-            break;
-        case 'teamranking':
-            $vars['view'] = 'teamranking';
-            $id = explode( ':', $segments[1] );
-            $vars['p'] = (int) $id[0];
-            break;
-        case 'roundresult':
-            $vars['view'] = 'roundresult';
-            $id = explode( ':', $segments[1] );
-            $vars['pr'] = (int) $id[0];
-            break;
-        case 'individual':
-            $vars['view'] = 'individual';
-            $id = explode( ':', $segments[1] );
-            $vars['i'] = (int) $id[0];
-            break;
-        case 'team':
-            $vars['view'] = 'team';
-            $id = explode( ':', $segments[1] );
-            $vars['t'] = (int) $id[0];
-            break;
-        case 'round':
-            $vars['view'] = 'round';
+        case 'runner':
+            $vars['view'] = 'runner';
             $id = explode( ':', $segments[1] );
             $vars['r'] = (int) $id[0];
             break;
+//         case 'teamranking':
+//             $vars['view'] = 'teamranking';
+//             $id = explode( ':', $segments[1] );
+//             $vars['p'] = (int) $id[0];
+//             break;
+//         case 'roundresult':
+//             $vars['view'] = 'roundresult';
+//             $id = explode( ':', $segments[1] );
+//             $vars['pr'] = (int) $id[0];
+//             break;
+//         case 'individual':
+//             $vars['view'] = 'individual';
+//             $id = explode( ':', $segments[1] );
+//             $vars['i'] = (int) $id[0];
+//             break;
+//         case 'team':
+//             $vars['view'] = 'team';
+//             $id = explode( ':', $segments[1] );
+//             $vars['t'] = (int) $id[0];
+//             break;
+//         case 'round':
+//             $vars['view'] = 'round';
+//             $id = explode( ':', $segments[1] );
+//             $vars['r'] = (int) $id[0];
+//             break;
         default:
             $vars['view'] = $segments[0];
     }
     return $vars;
 }
 
+// class BhaaHelperRoute
+// {
+// 	/**
+// 	* return links to a team player
+// 	* @param int projectid
+// 	* @param int teamid
+// 	* @param int personid
+// 	* @return url
+// 	*/
+// 	function getPlayerRoute( $projectid, $teamid, $personid, $layout=null )
+// 	{
+// 		$params = array(	"option" => "com_joomleague",
+// 						"view" => "player",
+// 						"p" => $projectid,
+// 						"tid" => $teamid,
+// 						"pid" => $personid );
+	
+// 		if ( ! is_null( $layout ) ) {
+// 			$params["layout"] = $layout;
+// 		}
+	
+// 		$query = JoomleagueHelperRoute::buildQuery( $params );
+// 		$link = JRoute::_( "index.php?" . $query, false );
+	
+// 		return $link;
+// 	}
+// }
 ?>

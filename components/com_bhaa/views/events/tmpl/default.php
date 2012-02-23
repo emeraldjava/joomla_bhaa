@@ -27,7 +27,11 @@ defined('_JEXEC') or die('Restricted access'); ?>
   {
     foreach ( $this->events as $event )
     {
-     $link_event = JRoute::_( 'index.php?view=event&p=' . $event['tag'] );
+//     $link_event = BhaaHelperRoute::BhaaBuildRoute(
+// 	    array(	"option" => "com_bhaa",
+//     			"view" => "event",
+//     			"e" => $event['tag']));
+     $link_event = JRoute::_( 'index.php?view=event&e='.$event['id'] );
      ?>
       <tr>
         <td>
