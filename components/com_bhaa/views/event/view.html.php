@@ -19,7 +19,7 @@ class BHAAViewEvent extends JView
 		$params	= &$application->getParams();
 		$this->assignRef('params',$params);
 		
-		$tag = &JRequest::getVar("tag","0");
+		$tag = &JRequest::getVar("e","0");
 		$this->assignRef('tag',$tag);
 		
 		//$model =& $this->getModel();

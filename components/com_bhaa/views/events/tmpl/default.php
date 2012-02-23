@@ -20,7 +20,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
 // 	    array(	"option" => "com_bhaa",
 //     			"view" => "event",
 //     			"e" => $event['tag']));
-     $link_event = JRoute::_( 'index.php?view=event&t='.$event['tag'] );
+     $link_event = JRoute::_( 'index.php?view=event&e='.$event['id'] );
      ?>
       <tr>
         <td>
