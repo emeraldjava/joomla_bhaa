@@ -22,11 +22,9 @@ class BHAAViewEvent extends JView
 		$tag = &JRequest::getVar("e","0");
 		$this->assignRef('tag',$tag);
 		
-		//$model =& $this->getModel();
-		//$events = $model->getEvents();
-		
-		$appparams =& JComponentHelper::getParams('com_bhaa');
-		//$this->assignRef('appparams',$appparams );
+		$model =& $this->getModel();
+		$results = $model->getResults();
+		$this->assignRef('results',$results );
 		
 		parent::display($tpl);
 	}

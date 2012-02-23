@@ -7,10 +7,32 @@ defined('_JEXEC') or die('Restricted access'); ?>
 <h3><?php echo JText::_( $this->tag ) ?></h3>
 <h3><?php echo JText::_( $this->params ) ?></h3>
 
-<?php foreach ($this->params as $i => $param) : ?>
-<li class="row<?php echo $i % 2; ?>">
-<h2><?php echo $this->escape($item->title); ?></h2>
-<?php endforeach; ?>
+<table>
+  <tr>
+    <th><?php echo JText::_( 'Position' ) ?></th>
+    <th><?php echo JText::_( 'Runner' ) ?></th>
+  </tr>
+  <?php
+  if ( count($this->results) )
+  {
+    foreach ( $this->results as $result )
+    {
+     $link_event = JRoute::_( 'index.php?view=event&r='.$result['runner'] );
+     ?>
+      <tr>
+        <td>
+        	<a href="<?php echo $link_event; ?>">
+        	  <?php echo $result['position']; ?>
+        	</a>
+       	</td>
+        <td><?php echo $result['firstname']; ?> <?php echo $result['surname']; ?></td>
+      </tr>
+   	<?php
+    }
+  }
+  ?>
+</table>
+
 
 <p class="copyright">
   <?php echo BhaaHTML::footer( ); ?>
