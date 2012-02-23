@@ -1,16 +1,5 @@
 <?php
 /**
-* @version    $Id: view.html.php 89 2008-05-02 06:46:38Z julienv $ 
-* @package    JoomlaTracks
-* @copyright  Copyright (C) 2008 Julien Vonthron. All rights reserved.
-* @license    GNU/GPL, see LICENSE.php
-* Joomla Tracks is free software. This version may have been modified pursuant
-* to the GNU General Public License, and as distributed it includes or
-* is derivative of works licensed under the GNU General Public License or
-* other free or open source software licenses.
-* See COPYRIGHT.php for copyright notices and details.
-*/
-/**
  * transform the url passed in JRoute function for SEF display
  *
  * @param url $query
@@ -29,10 +18,10 @@ function BhaaBuildRoute(&$query)
     switch ( $view )
     {
         case 'event':
-            if(isset($query['e']))
+            if(isset($query['t']))
             {
-                $segments[] = $query['e'];
-                unset( $query['e'] );
+                $segments[] = $query['t'];
+                unset( $query['t'] );
             }
             break;
         case 'runner':
@@ -61,7 +50,7 @@ function BhaaParseRoute($segments)
         case 'event':
             $vars['view'] = 'event';
             $id = explode( ':', $segments[1] );
-            $vars['e'] = (int) $id[0];
+            $vars['t'] = (string) $id[0];
             break;
         case 'runner':
             $vars['view'] = 'runner';

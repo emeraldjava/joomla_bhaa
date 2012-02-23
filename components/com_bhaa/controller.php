@@ -32,7 +32,7 @@ class BhaaController extends JController
 		// Set a default view if none exists
 		if ( ! JRequest::getCmd( 'view' ) ) {
 			JRequest::setVar('view', 'events' );
-		}
+		}		
 		parent::display();
 	}
 }

@@ -28,6 +28,5 @@ class BhaaModel extends JModel
 	{
 		return BhaaHelper::getBhaaDB();
 	}
-
 }
 ?>
