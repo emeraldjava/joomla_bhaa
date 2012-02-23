@@ -5,7 +5,6 @@ defined('_JEXEC') or die('Restricted access'); ?>
 <div id="event">
 <h1><?php echo JText::_( 'BHAA Event' ) ?></h1>
 <h3><?php echo JText::_( $this->tag ) ?></h3>
-<h3><?php echo JText::_( $this->params ) ?></h3>
 
 <table>
   <tr>
@@ -17,15 +16,16 @@ defined('_JEXEC') or die('Restricted access'); ?>
   {
     foreach ( $this->results as $result )
     {
-     $link_event = JRoute::_( 'index.php?view=event&r='.$result['runner'] );
+     $link_event = JRoute::_( 'index.php?view=runner&id='.$result['runner'] );
      ?>
       <tr>
         <td>
-        	<a href="<?php echo $link_event; ?>">
-        	  <?php echo $result['position']; ?>
-        	</a>
+    		<?php echo $result['position']; ?>
        	</td>
-        <td><?php echo $result['firstname']; ?> <?php echo $result['surname']; ?></td>
+        <td><a href="<?php echo $link_event; ?>">
+	        	<?php echo $result['firstname']; ?> <?php echo $result['surname']; ?>
+        	</a>
+        </td>
       </tr>
    	<?php
     }

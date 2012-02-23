@@ -15,7 +15,14 @@ class BHAAViewRunner extends JView
 {
 	function display($tpl = null)
 	{	
-		$this->assign('runner','their name');
+		$id = &JRequest::getVar("id","0");
+		$this->assignRef('id',$id);
+		
+		$model =& $this->getModel();
+		
+		$this->assignRef('runner',$model->getRunner());
+		$this->assignRef('results',$model->getResults());
+
 		parent::display($tpl);
 	}
 }
