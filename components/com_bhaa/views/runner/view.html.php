@@ -20,6 +20,9 @@ class BHAAViewRunner extends JView
 		
 		$model =& $this->getModel();
 		
+		$user =& JFactory::getUser();
+		
+		$this->assignRef('user',$user);
 		$this->assignRef('runner',$model->getRunner());
 		$this->assignRef('results',$model->getResults());
 

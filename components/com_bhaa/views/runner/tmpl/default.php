@@ -7,6 +7,14 @@ defined('_JEXEC') or die('Restricted access'); ?>
 <h1><?php echo JText::_( $this->id ) ?></h1>
 <h1><?php echo print_r( $this->runner ) ?></h1>
 <h3><?php echo $this->runner['firstname'].' '.$this->runner['surname']; ?></h3>
+<h3>USER <?php echo $this->user->id; ?></h3>
+
+<h3><?php
+if($this->user->id==$this->id)
+{
+echo $this->runner['address1'].' '.$this->runner['address2'];
+}
+?></h3>
 
 <table>
   <tr>

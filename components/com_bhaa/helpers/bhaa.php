@@ -23,8 +23,8 @@ class BHAAHelper
 			$option = array();
 			$option['driver'] = 'mysqli';        // Database driver name
 			$option['host'] = 'localhost';      // Database host name
-			$option['user'] = 'bhaaie';       // User for database authentication
-			$option['password'] = 'bhaaie';   // Password for database authentication
+			$option['user'] = '';       // User for database authentication
+			$option['password'] = '';  // Password for database authentication
 			$option['database'] = 'bhaaie_members';   // Database name
 			$option['prefix'] = '';             // Database prefix
 			//print_r($option); 
