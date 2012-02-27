@@ -18,10 +18,10 @@ function BhaaBuildRoute(&$query)
     switch ( $view )
     {
         case 'event':
-            if(isset($query['e']))
+            if(isset($query['t']))
             {
-                $segments[] = $query['e'];
-                unset( $query['e'] );
+                $segments[] = $query['t'];
+                unset( $query['t'] );
             }
             break;
         case 'runner':
@@ -50,7 +50,7 @@ function BhaaParseRoute($segments)
         case 'event':
             $vars['view'] = 'event';
             $id = explode( ':', $segments[1] );
-            $vars['e'] = (int) $id[0];
+            $vars['t'] = $id[0];
             break;
         case 'runner':
             $vars['view'] = 'runner';

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-	<params>
-		<param name="extdb" type="text" size="20"  default="bhaaie_members" label="External Database" description="DETAILEXTDB" />
-		<param name="extdb_server" type="text" size="20"  default="localhost" label="Server" description="DETAILEXTDBSRV" />
-		<param name="extdb_user" type="text" size="10"  default="bhaaie" label="Username" description="DETAILUSEREXTDB" />
-		<param name="extdb_pass" type="text" size="10"  default="bhaaie" label="Password" description="DETAILPASSEXTDB" />
-	</params>
+	<fields name="params">
+		<fieldset>
+			<field name="extdb" type="text" size="20" default="bhaaie_members" label="External Database" description="DETAILEXTDB" />
+			<field name="extdb_server" type="text" size="20" default="localhost" label="Server" description="DETAILEXTDBSRV" />
+			<field name="extdb_user" type="text" size="10" default="bhaaie" label="Username" description="DETAILUSEREXTDB" />
+			<field name="extdb_pass" type="text" size="10" default="bhaaie" label="Password" description="DETAILPASSEXTDB" />
+		</fieldset>
+	</fields>
 </config>
