@@ -7,6 +7,7 @@
  */
 function BhaaBuildRoute(&$query)
 {
+	print_r($query);
     $view = '';
     $segments = array();
     if(isset($query['view']))
@@ -33,6 +34,7 @@ function BhaaBuildRoute(&$query)
             break;
 
     }
+    print_r($segments);
     return $segments;
 }
 
@@ -45,7 +47,7 @@ function BhaaBuildRoute(&$query)
 function BhaaParseRoute($segments)
 {
     $vars = array();
-    //print_r($segments);
+    print_r($segments);
     switch($segments[0])
     {
         case 'event':
@@ -56,7 +58,7 @@ function BhaaParseRoute($segments)
         case 'runner':
             $vars['view'] = 'runner';
             $id = explode( ':', $segments[1] );
-            $vars['r'] = (int) $id[0];
+            $vars['r'] = (int) $id[1];
             break;
 //         case 'teamranking':
 //             $vars['view'] = 'teamranking';
@@ -86,34 +88,7 @@ function BhaaParseRoute($segments)
         default:
             $vars['view'] = $segments[0];
     }
+    print_r($vars);
     return $vars;
 }
-
-// class BhaaHelperRoute
-// {
-// 	/**
-// 	* return links to a team player
-// 	* @param int projectid
-// 	* @param int teamid
-// 	* @param int personid
-// 	* @return url
-// 	*/
-// 	function getPlayerRoute( $projectid, $teamid, $personid, $layout=null )
-// 	{
-// 		$params = array(	"option" => "com_joomleague",
-// 						"view" => "player",
-// 						"p" => $projectid,
-// 						"tid" => $teamid,
-// 						"pid" => $personid );
-	
-// 		if ( ! is_null( $layout ) ) {
-// 			$params["layout"] = $layout;
-// 		}
-	
-// 		$query = JoomleagueHelperRoute::buildQuery( $params );
-// 		$link = JRoute::_( "index.php?" . $query, false );
-	
-// 		return $link;
-// 	}
-// }
 ?>

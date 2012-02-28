@@ -3,8 +3,7 @@
 defined('_JEXEC') or die('Restricted access'); ?>
 
 <div id="event">
-<h1><?php echo JText::_( 'BHAA Event' ) ?></h1>
-<h3><?php echo JText::_( $this->tag ) ?></h3>
+<h1><?php echo JText::_( 'Event : '.$this->tag ) ?></h1>
 
 <table>
   <tr>

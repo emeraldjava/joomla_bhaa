@@ -3,39 +3,33 @@
 defined('_JEXEC') or die('Restricted access'); ?>
 
 <div id="runner">
-<h1><?php echo JText::_( 'BHAA RUNNER' ) ?></h1>
-<h1><?php echo JText::_( $this->id ) ?></h1>
-<h1><?php echo print_r( $this->runner ) ?></h1>
-<h3><?php echo $this->runner['firstname'].' '.$this->runner['surname']; ?></h3>
-<h3>USER <?php echo $this->user->id; ?></h3>
+<h1><?php echo JText::_( $this->runner['firstname'].' '.$this->runner['surname'] ) ?></h1>
 
 <h3><?php
 if($this->user->id==$this->id)
 {
-echo $this->runner['address1'].' '.$this->runner['address2'];
+	echo $this->runner['address1'].' '.$this->runner['address2'];
 }
-?></h3>
+?>
+</h3>
 
 <table>
   <tr>
+    <th><?php echo JText::_( 'Event' ) ?></th>
     <th><?php echo JText::_( 'Position' ) ?></th>
-    <th><?php echo JText::_( 'Runner' ) ?></th>
+    <th><?php echo JText::_( 'Standard' ) ?></th>
   </tr>
   <?php
   if ( count($this->results) )
   {
     foreach ( $this->results as $result )
     {
-     $link_event = JRoute::_( 'index.php?view=runner&r='.$result['runner'] );
+     $link_event = JRoute::_( 'index.php?view=event&t='.$result['tag'] );
      ?>
       <tr>
-        <td>
-    		<?php echo $result['position']; ?>
-       	</td>
-        <td><a href="<?php echo $link_event; ?>">
-	        	<?php echo $result['firstname']; ?> <?php echo $result['surname']; ?>
-        	</a>
-        </td>
+        <td><a href="<?php echo $link_event; ?>"><?php echo $result['tag']; ?></a></td>
+      	<td><?php echo $result['position']; ?></td>
+        <td><?php echo $result['standard'].'/'.$result['postracestandard'] ?></td>
       </tr>
    	<?php
     }

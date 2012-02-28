@@ -26,10 +26,10 @@ class BHAAViewEvent extends JView
 		$results = $model->getResults();
 		$this->assignRef('results',$results );
 		
- 		$doc      = JFactory::getDocument();
- 		$renderer = $doc->loadRenderer( $tag );
- 		$raw      = array( 'style' => 'html' );
- 		echo $renderer->render('header', $raw, null);
+ 		//$doc      = JFactory::getDocument();
+ 		//$renderer = $doc->loadRenderer( $tag );
+ 		//$raw      = array( 'style' => 'html' );
+ 		//echo $renderer->render('header', $raw, null);
 		
 		parent::display($tpl);
 	}
