@@ -16,11 +16,11 @@ defined('_JEXEC') or die('Restricted access'); ?>
   {
     foreach ( $this->events as $event )
     {
-     $link_event = JRoute::_( 'index.php?view=event&t='.$event['tag'] );
+     $link_event = JRoute::_( 'index.php?option=com_bhaa&view=event&t='.$event['tag'] );
      ?>
       <tr>
         <td>
-        	<a href="<?php echo $link_event; ?>" title ="<?php echo JText::_( 'Event' ); ?>">
+        	<a href="<?php echo $link_event; ?>" title="<?php echo JText::_( $event['tag'] ); ?>">
         	  <?php echo $event['name']; ?>
         	</a>
        	</td>

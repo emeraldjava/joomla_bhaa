@@ -45,12 +45,13 @@ function BhaaBuildRoute(&$query)
 function BhaaParseRoute($segments)
 {
     $vars = array();
+    //print_r($segments);
     switch($segments[0])
     {
         case 'event':
             $vars['view'] = 'event';
             $id = explode( ':', $segments[1] );
-            $vars['t'] = $id[0];
+            $vars['t'] = $id[1];
             break;
         case 'runner':
             $vars['view'] = 'runner';
