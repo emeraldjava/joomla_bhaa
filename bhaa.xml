@@ -4,10 +4,10 @@
 	<creationDate>22/02/2012</creationDate>
 	<copyright>Copyright (C) 2011. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <author></author>
-	<authorEmail></authorEmail>
+    <author>paul.t.oconnell@gmail.com</author>
+	<authorEmail>paul.t.oconnell@gmail.com</authorEmail>
 	<authorUrl></authorUrl>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<description>BHAA</description>
 
 	<!-- Install Database Section -->
