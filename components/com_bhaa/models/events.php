@@ -28,7 +28,7 @@ class BhaaModelEvents extends BhaaModel
 {
 	function getEvents()
 	{
-		$query =  'SELECT e.id, e.name, e.tag, e.date FROM event as e  ORDER BY e.date DESC';
+		$query =  'SELECT e.id, e.name, e.tag, e.date, e.location FROM event as e  ORDER BY e.date DESC limit 10';
 		$this->getDB()->setQuery( $query );
 		$x = $this->getDB()->loadAssocList();
 		return $x;
