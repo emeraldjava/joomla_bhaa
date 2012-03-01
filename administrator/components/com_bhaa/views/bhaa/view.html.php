@@ -29,7 +29,7 @@ class BhaaViewBhaa extends JView
 	{
 		jimport('joomla.html.pane');
 		
-		$params = new JParameter( $row->params, JPATH_ADMINISTRATOR .'/components/com_bhaa/config_items.xml', 'component' );
+		$params = new JParameter( $row->params, JPATH_ADMINISTRATOR .'/components/com_bhaa/config.xml', 'component' );
 		
 		$this->assignRef('params', $params);
 		

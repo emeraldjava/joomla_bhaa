@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="component" version="2.5.0" method="upgrade">
-	<name>BHAA</name>
+	<name>COM_BHAA</name>
 	<creationDate>22/02/2012</creationDate>
 	<copyright>Copyright (C) 2011. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <author>paul.t.oconnell@gmail.com</author>
 	<authorEmail>paul.t.oconnell@gmail.com</authorEmail>
 	<authorUrl></authorUrl>
-	<version>1.0.2</version>
+	<version>1.0.4</version>
 	<description>BHAA</description>
 
 	<!-- Install Database Section -->
-	<!-- 
-	<installfile>install.bhaa.php</installfile>
 	<install>
+  		<sql>
+            <file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+  		</sql>
+  	</install>
+	<!-- Uninstall Database Section -->
+  	<uninstall>
 		<sql>
-			<file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
-			<file driver="mysql">install.mysql.nonutf8.sql</file>
-		</sql>
-	</install>
-	-->
+        	<file driver="mysql" charset="utf8">uninstall.mysql.utf8.sql</file>
+ 		</sql>
+  	</uninstall>
 	
 	<files folder="components/com_bhaa">
 		<filename>bhaa.php</filename>
@@ -48,7 +50,7 @@
 	<administration>
 
 		<!-- Administration Menu Section -->
-		<menu>bhaa</menu>
+		<menu>COM_BHAA_MENU</menu>
 		<!-- Note that all & must be escaped to &amp; for the file to be valid 
 			XML and be parsed by the installer -->
 		<!-- <submenu> <menu link="option=com_bhaa">Projects</menu> <menu link="option=com_bhaa&amp;view=competitions">Competitions</menu> 
@@ -69,7 +71,7 @@
 			<filename>helper.php</filename>
 			<filename>index.html</filename>
 			<filename>install.mysql.utf8.sql</filename>
-			<filename>install.mysql.nonutf8.sql</filename>
+			<filename>uninstall.mysql.utf8.sql</filename>
 			<filename>LICENSE.txt</filename>
 			<folder>abstract</folder>
 			<folder>assets</folder>
