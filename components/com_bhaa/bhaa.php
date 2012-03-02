@@ -43,6 +43,8 @@ if($controller = JRequest::getWord('controller')) {
 $classname	= 'BhaaController'.ucfirst($controller);
 $controller = new $classname( );
 
+//$controller->addModelPath(JPATH_COMPONENT_ADMINISTRATOR.DS.'models');
+
 // Perform the Request task
 $controller->execute( JRequest::getVar('task'));
 

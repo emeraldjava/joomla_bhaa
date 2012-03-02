@@ -1,6 +1,9 @@
 <?php
  // no direct access
-defined('_JEXEC') or die('Restricted access'); ?>
+defined('_JEXEC') or die('Restricted access'); 
+
+//echo print_r($this->events);
+?>
 
 <div id="tracks">
 <h1><?php echo JText::_( 'BHAA Events' ) ?></h1>
@@ -16,16 +19,16 @@ defined('_JEXEC') or die('Restricted access'); ?>
   {
     foreach ( $this->events as $event )
     {
-     $link_event = JRoute::_( 'index.php?option=com_bhaa&view=event&t='.$event['tag'] );
+     $link_event = JRoute::_( 'index.php?option=com_bhaa&view=event&id='.$event['id'] );
      ?>
       <tr>
         <td>
-        	<a href="<?php echo $link_event; ?>" title="<?php echo JText::_( $event['tag'] ); ?>">
+        	<a href="<?php echo $link_event; ?>" title="<?php echo JText::_( $event['alias'] ); ?>">
         	  <?php echo $event['name']; ?>
         	</a>
        	</td>
-        <td><?php echo $event['location']; ?></td>
-        <td><?php echo $event['date']; ?></td>
+        <td><?php echo $event['alias']; ?></td>
+        <td><?php echo $event['alias']; ?></td>
       </tr>
       <?php
     }

@@ -33,6 +33,7 @@ class BhaaController extends JController
 		if ( ! JRequest::getCmd( 'view' ) ) {
 			JRequest::setVar('view', 'events' );
 		}		
+		
 		$params = &JComponentHelper::getParams( 'com_bhaa' );
 		//$this->assignRef( 'params', $params );
 		
