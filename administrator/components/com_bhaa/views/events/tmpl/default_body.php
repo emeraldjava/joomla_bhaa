@@ -8,7 +8,10 @@ defined('_JEXEC') or die('Restricted Access');
 	<tr class="row<?php echo $i % 2; ?>">
 		<td>
 			<?php echo $item->id; ?>
-		</td>				
+		</td>	
+		<td>
+			<?php echo JHtml::_('grid.id', $i, $item->id); ?>
+		</td>			
 		<td>
 			<a href="<?php echo $link; ?>" title="<?php echo JText::_('Edit '.$item->alias ); ?>">
 			<?php echo $item->name; ?>

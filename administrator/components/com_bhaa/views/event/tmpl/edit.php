@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
 JHtml::_('behavior.tooltip');
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_bhaa&view=event&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="bhaa-form">
+<form action="<?php echo JRoute::_('index.php?option=com_bhaa&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="bhaa-form">
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'COM_BHAA_EVENT_DETAILS' ); ?></legend>
 		<ul class="adminformlist">
@@ -13,7 +13,7 @@ JHtml::_('behavior.tooltip');
 		</ul>
 	</fieldset>
 	<div>
-		<input type="hidden" name="task" value="event.edit" />
+		<input type="hidden" name="task" value="event.edit"/>
 		<?php echo JHtml::_('form.token'); ?>
 	</div>
 </form>

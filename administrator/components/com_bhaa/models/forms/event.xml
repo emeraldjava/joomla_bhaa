@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-	<fields name="request"
-                addfieldpath="administrator/components/com_bhaa/models/fields">
 		<fieldset>
 			<field
 				name="id"
@@ -26,5 +24,4 @@
 				default=""
 			/>
 		</fieldset>
-	</fields>
 </form>
