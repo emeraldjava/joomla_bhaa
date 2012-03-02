@@ -30,7 +30,7 @@ class BhaaModelEvent extends JModelAdmin
 	public function getForm($data = array(), $loadData = true) 
 	{
 		// Get the form.
-		$form = $this->loadForm('com_bhaa.edit', 'event', 
+		$form = $this->loadForm('com_bhaa.event', 'event', 
 			array('control' => 'jform', 'load_data' => $loadData));
 		if (empty($form)) 
 		{
