@@ -24,8 +24,11 @@ jimport('joomla.application.component.controller');
  */
 class BhaaController extends JController //extends BaseController
 {
-  function display()
-  {
+	function display()
+  	{
+  		// set default view if not set
+  		JRequest::setVar('view', JRequest::getCmd('view', 'Events'));
+  	
 		parent::display();
 	}
 }
