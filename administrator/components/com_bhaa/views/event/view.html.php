@@ -41,8 +41,9 @@ class BhaaViewEvent extends JView
 	{
 		JRequest::setVar('hidemainmenu', true);
 		$isNew = ($this->item->id == 0);
-		JToolBarHelper::title($isNew ? JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLD_NEW') : JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLD_EDIT'));
-		JToolBarHelper::save('helloworld.save');
-		JToolBarHelper::cancel('helloworld.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
+		JToolBarHelper::title($isNew ? JText::_('COM_BHAA_EVENT_NEW') : JText::_('COM_BHAA_EVENT_EDIT'));
+		JToolBarHelper::save('event.save');
+		JToolBarHelper::cancel('event.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
 	}
 }
+?>

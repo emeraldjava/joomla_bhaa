@@ -23,7 +23,7 @@ class BhaaViewEvents extends JView
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) 
 		{
-			JError::raiseError(500, implode('<br />', $errors));
+			JError::raiseError(500, implode('<br/>', $errors));
 			return false;
 		}
 		// Assign data to the view
@@ -42,9 +42,11 @@ class BhaaViewEvents extends JView
 	 */
 	protected function addToolBar() 
 	{
-		JToolBarHelper::title(JText::_('COM_BHAA_MANAGER_EVENTS'));
+		JToolBarHelper::title(JText::_('COM_BHAA_EVENTS'));
 		JToolBarHelper::deleteList('', 'events.delete');
 		JToolBarHelper::editList('event.edit');
+		//JToolBarHelper::editListX('event.edit');
 		JToolBarHelper::addNew('event.add');
 	}
 }
+?>

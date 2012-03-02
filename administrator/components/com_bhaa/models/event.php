@@ -1,4 +1,10 @@
 <?php
+
+// No direct access to this file
+defined('_JEXEC') or die('Restricted access');
+// import Joomla modelform library
+jimport('joomla.application.component.modeladmin');
+
 class BhaaModelEvent extends JModelAdmin
 {
 	/**
@@ -24,7 +30,7 @@ class BhaaModelEvent extends JModelAdmin
 	public function getForm($data = array(), $loadData = true) 
 	{
 		// Get the form.
-		$form = $this->loadForm('com_bhaa.event', 'bhaa', 
+		$form = $this->loadForm('com_bhaa.edit', 'event', 
 			array('control' => 'jform', 'load_data' => $loadData));
 		if (empty($form)) 
 		{
@@ -49,3 +55,4 @@ class BhaaModelEvent extends JModelAdmin
 		return $data;
 	}
 }
+?>

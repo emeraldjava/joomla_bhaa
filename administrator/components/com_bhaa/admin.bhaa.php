@@ -27,10 +27,10 @@ if (!$user->authorize( 'com_tracks', 'manage' )) {
 //require_once (JPATH_COMPONENT.DS.'controllers'.DS.'base.php');
 require_once (JPATH_COMPONENT.DS.'controller.php');
 // the helper
-require_once( JPATH_COMPONENT.DS.'helper.php' );
+//require_once( JPATH_COMPONENT.DS.'helper.php' );
 
 // and the abstract view
-require_once (JPATH_COMPONENT.DS.'abstract'.DS.'bhaaview.php');
+// require_once (JPATH_COMPONENT.DS.'abstract'.DS.'bhaaview.php');
 
 // Require specific controller if requested
 if($controller = JRequest::getWord('controller')) {
