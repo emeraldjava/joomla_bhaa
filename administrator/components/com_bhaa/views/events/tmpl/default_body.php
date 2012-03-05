@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted Access');
 ?>
 <?php foreach($this->items as $i => $item): 
-	$link = JRoute::_( 'index.php?option=com_bhaa&view=event&layout=edit&id='.$item->id);
+	$link = JRoute::_( 'index.php?option=com_bhaa&task=event.edit&id='.$item->id);
 ?>
 	<tr class="row<?php echo $i % 2; ?>">
 		<td>

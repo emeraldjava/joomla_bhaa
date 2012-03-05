@@ -5,8 +5,17 @@ defined('_JEXEC') or die('Restricted access');
 // import Joomla modelform library
 jimport('joomla.application.component.modeladmin');
 
+jimport('joomla.error.log');
+
 class BhaaModelEvent extends JModelAdmin
 {
+	public function save($data)
+	{
+		$log = &JLog::getInstance();//'com_bhaa.log.php');
+		$log->addEntry($data);
+		parent::save($data);
+	}
+	
 	/**
 	 * Returns a reference to the a Table object, always creating it.
 	 * @param	type	The table type to instantiate
@@ -47,11 +56,12 @@ class BhaaModelEvent extends JModelAdmin
 	protected function loadFormData() 
 	{
 		// Check the session for previously entered form data.
-		$data = JFactory::getApplication()->getUserState('com_bhaa.edit.event.data', array());
+		$data = JFactory::getApplication()->getUserState('com_bhaa.event.edit.data', array());
 		if (empty($data)) 
 		{
 			$data = $this->getItem();
 		}
+		
 		return $data;
 	}
 }

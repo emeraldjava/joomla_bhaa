@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
 JHtml::_('behavior.tooltip');
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_bhaa&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="bhaa-form">
+<form action="<?php echo JRoute::_('index.php?option=com_bhaa&task=bhaa.edit&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm">
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'COM_BHAA_EVENT_DETAILS' ); ?></legend>
 		<ul class="adminformlist">
