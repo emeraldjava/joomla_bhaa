@@ -19,6 +19,10 @@ class BhaaModelEvent extends JModelItem
 			$this->event = $table->load($id);
 		}
 		return $this->event;
+	}
+	
+// 	function getResults()
+// 	{
 // 		$tag = JRequest::getString('t');
 // 		$query = sprintf('SELECT rr.race,rr.runner,rr.position,r.surname,r.firstname FROM raceresult rr 
 // 			JOIN runner r on rr.runner=r.id 
@@ -28,6 +32,6 @@ class BhaaModelEvent extends JModelItem
 // 		$this->getDB()->setQuery( $query );
 // 		$x = $this->getDB()->loadAssocList();
 // 		return $x;
-	}
+// 	}
 }
 ?>

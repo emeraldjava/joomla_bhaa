@@ -9,7 +9,7 @@ jimport('joomla.filter.input');
 /**
 * Event Table class
 */
-class TableRunner extends JTable
+class BhaaTableRunner extends JTable
 {
 	var $id = null;
 	var $alias;

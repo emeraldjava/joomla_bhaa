@@ -17,9 +17,9 @@ class BhaaModelEvents extends JModelList
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
 		// Select some fields
-		$query->select('id,name,alias');
+		$query->select('id,name,tag');
 		// From the hello table
-		$query->from('#__bhaa_event');
+		$query->from('#__bhaa_event')->order('id')->limit(20);
 		return $query;
 	}	
 }

@@ -23,8 +23,8 @@ class BHAAViewEvent extends JView
 		$this->assignRef('tag',$tag);
 		
 		$model = &$this->getModel();
-		$results = $model->getResults();
-		$this->assignRef('results',$results );
+		//$results = $model->getResults();
+		//$this->assignRef('results',$results );
 		
  		//$doc      = JFactory::getDocument();
  		//$renderer = $doc->loadRenderer( $tag );

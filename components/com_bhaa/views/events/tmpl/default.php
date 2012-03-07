@@ -23,12 +23,12 @@ defined('_JEXEC') or die('Restricted access');
      ?>
       <tr>
         <td>
-        	<a href="<?php echo $link_event; ?>" title="<?php echo JText::_( $event['alias'] ); ?>">
+        	<a href="<?php echo $link_event; ?>" title="<?php echo JText::_( $event['tag'] ); ?>">
         	  <?php echo $event['name']; ?>
         	</a>
        	</td>
-        <td><?php echo $event['alias']; ?></td>
-        <td><?php echo $event['alias']; ?></td>
+        <td><?php echo $event['tag']; ?></td>
+        <td><?php echo $event['tag']; ?></td>
       </tr>
       <?php
     }

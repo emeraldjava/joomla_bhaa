@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access'); ?>
 
 <div id="runner">
-<h1><?php echo JText::_( $this->runner['firstname'].' '.$this->runner['surname'] ) ?></h1>
+<h1><?php echo JText::_( $this->runner['firstname'].' '.$this->runner['surname'] ) ?> results, edit address, league position, standard chart, flickr images</h1>
 
 <h3><?php
 if($this->user->id==$this->id)

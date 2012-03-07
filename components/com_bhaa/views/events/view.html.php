@@ -18,7 +18,7 @@ class BHAAViewEvents extends JView
 	{	
 		$model = &$this->getModel();
 		$events = $model->getListQuery();
-		print_r($events);
+		//print_r($events);
 		$this->assignRef('events',$events);
 		parent::display($tpl);
 	}

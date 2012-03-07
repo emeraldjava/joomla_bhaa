@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted Access');
 			<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 		</td>			
 		<td>
-			<a href="<?php echo $link; ?>" title="<?php echo JText::_('Edit '.$item->alias ); ?>">
+			<a href="<?php echo $link; ?>" title="<?php echo JText::_('Edit '.$item->tag ); ?>">
 			<?php echo $item->name; ?>
 			</a>
 		</td>
