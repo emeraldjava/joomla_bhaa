@@ -19,7 +19,7 @@ class BhaaModelEvents extends JModelList
 		// Select some fields
 		$query->select('id,name,tag');
 		// From the hello table
-		$query->from('#__bhaa_event');
+		$query->from('#__bhaa_event')->order('id');
 		
 		$db->setQuery( $query );
 		return $db->loadAssocList();

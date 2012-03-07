@@ -11,25 +11,25 @@ defined('_JEXEC') or die('Restricted access'); ?>
     <th><?php echo JText::_( 'Runner' ) ?></th>
   </tr>
   <?php
-//   if ( count($this->results) )
-//   {
-//     foreach ( $this->results as $result )
-//     {
-//      $link_event = JRoute::_( 'index.php?view=runner&id='.$result['runner'] );
+   if ( count($this->results) )
+   {
+     foreach ( $this->results as $result )
+     {
+      $link_event = JRoute::_( 'index.php?view=runner&id='.$result['runner'] );
      ?>
       <tr>
         <td>
-    		<?php //echo $result['position']; ?>
+    		<?php echo $result['position']; ?>
        	</td>
-        <td><a href="<?php //echo $link_event; ?>">
-	        	<?php //echo $result['firstname']; ?> <?php //echo $result['surname']; ?>
+        <td><a href="<?php echo $link_event; ?>">
+	        	<?php echo $result['firstname']; ?> <?php echo $result['surname']; ?>
         	</a>
         </td>
       </tr>
    	<?php
-  //  }
-//  }
-  ?>
+    }
+  }
+?>
 </table>
 
 

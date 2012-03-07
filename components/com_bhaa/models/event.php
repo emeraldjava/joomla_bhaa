@@ -21,17 +21,26 @@ class BhaaModelEvent extends JModelItem
 		return $this->event;
 	}
 	
-// 	function getResults()
-// 	{
-// 		$tag = JRequest::getString('t');
-// 		$query = sprintf('SELECT rr.race,rr.runner,rr.position,r.surname,r.firstname FROM raceresult rr 
-// 			JOIN runner r on rr.runner=r.id 
-// 			JOIN race race on race.id=rr.race 
-// 			JOIN event e on e.id=race.event			
-// 			WHERE e.tag="%s" ORDER by rr.race, rr.position',$tag);
-// 		$this->getDB()->setQuery( $query );
-// 		$x = $this->getDB()->loadAssocList();
-// 		return $x;
-// 	}
+	function getResults()
+	{
+		$tag = JRequest::getString('t','garda2012');
+		$db = JFactory::getDBO();
+		$query = $db->getQuery(true);
+		// Select some fields
+//		$query->select('id,name,tag');
+		// From the hello table
+	//	$query->from('#__bhaa_event')->order('id')->limit(20);
+		//return $query;
+		
+
+		$query = sprintf('SELECT rr.race,rr.runner,rr.position,r.surname,r.firstname FROM #__bhaa_raceresult rr 
+			JOIN #__bhaa_runner r on rr.runner=r.id 
+			JOIN #__bhaa_race race on race.id=rr.race 
+			JOIN #__bhaa_event e on e.id=race.event			
+			WHERE e.tag="%s" ORDER by rr.race, rr.position',$tag);
+		$db->setQuery( $query );
+		$x = $db->loadAssocList();
+		return $x;
+	}
 }
 ?>

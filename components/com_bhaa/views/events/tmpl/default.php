@@ -2,7 +2,6 @@
  // no direct access
 defined('_JEXEC') or die('Restricted access'); 
 
-//echo print_r($this->events);
 ?>
 
 <div id="tracks">
