@@ -3,8 +3,8 @@
 defined('_JEXEC') or die('Restricted access'); ?>
 
 <div id="runner">
-<h1><?php echo JText::_( $this->runner['firstname'].' '.$this->runner['surname'] ) ?> results, edit address, league position, standard chart, flickr images</h1>
-
+<h2><?php echo JText::_( $this->runner['firstname'].' '.$this->runner['surname'] ) ?></h2>
+results, edit address, league position, standard chart, flickr images.
 <h3><?php
 if($this->user->id==$this->id)
 {
@@ -13,7 +13,7 @@ if($this->user->id==$this->id)
 ?>
 </h3>
 
-<table>
+<table class="table table-striped table-bordered table-condensed">
   <tr>
     <th><?php echo JText::_( 'Event' ) ?></th>
     <th><?php echo JText::_( 'Position' ) ?></th>

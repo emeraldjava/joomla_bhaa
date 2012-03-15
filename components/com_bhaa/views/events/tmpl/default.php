@@ -4,10 +4,9 @@ defined('_JEXEC') or die('Restricted access');
 
 ?>
 
-<div id="tracks">
-<h1><?php echo JText::_( 'BHAA Events' ) ?></h1>
+<h3><?php echo JText::_( 'BHAA Events' ) ?></h3>
 
-<table>
+<table class="table table-striped table-bordered table-condensed">
   <tr>
     <th><?php echo JText::_( 'Name' ) ?></th>
     <th><?php echo JText::_( 'Location' ) ?></th>
@@ -34,7 +33,3 @@ defined('_JEXEC') or die('Restricted access');
   }
   ?>
 </table>
-<p class="copyright">
-  <?php echo BhaaHTML::footer( ); ?>
-</p>
-</div>
