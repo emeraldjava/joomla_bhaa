@@ -2,23 +2,37 @@
  // no direct access
 defined('_JEXEC') or die('Restricted access'); ?>
 
-<div id="runner">
-<h2><?php echo JText::_( $this->runner['firstname'].' '.$this->runner['surname'] ) ?></h2>
-results, edit address, league position, standard chart, flickr images.
-<h3><?php
+<div class="row">
+  <div class="span8">
+    <h3><?php echo JText::_( $this->runner['firstname'].' '.$this->runner['surname'] ) ?></h3>
+    <div class="row">
+      <div class="span2">Address</div>
+      <div class="span2">Standard</div>
+      <div class="span2"><span class="label label-warning">Flickr</span></div>
+    </div>
+  </div>
+  
+  <div class="span8">
+  <h4><?php
 if($this->user->id==$this->id)
 {
 	echo $this->runner['address1'].' '.$this->runner['address2'];
 }
 ?>
-</h3>
-
-<table class="table table-striped table-bordered table-condensed">
-  <tr>
+</h4>
+  </div>
+  
+    <div class="span8">
+    <span class="label">Results</span>
+    <table class="table table-striped table-bordered table-condensed">
+    <thead>
+	<tr>
     <th><?php echo JText::_( 'Event' ) ?></th>
     <th><?php echo JText::_( 'Position' ) ?></th>
     <th><?php echo JText::_( 'Standard' ) ?></th>
-  </tr>
+  	</tr>
+  	</thead>
+	<tbody>
   <?php
   if ( count($this->results) )
   {
@@ -35,9 +49,8 @@ if($this->user->id==$this->id)
     }
   }
   ?>
-</table>
+   </tbody>
+</table>    
+</div>
 
-<p class="copyright">
-  <?php echo BhaaHTML::footer( ); ?>
-</p>
 </div>
