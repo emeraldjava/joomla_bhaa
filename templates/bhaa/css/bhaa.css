@@ -524,7 +524,7 @@ form.well {
 }
 
 /* Tighten up spacing */
-.well hr {
+.xwell hr {
   margin: 18px 0;
 }
 
